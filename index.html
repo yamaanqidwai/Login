@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style2.css" />
+    <script
+      src="https://kit.fontawesome.com/2694425357.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form>
+        <h1>Login</h1>
+        <div class="input-box">
+          <label>
+            <i class="fa-solid fa-user icon-shift-left"></i>
+            <input type="text" id="uname" name="uname" placeholder=" " />
+            <span class="placeholder-label">Username </span>
+          </label>
+        </div>
+        <div class="input-box">
+          <i class="fa-solid fa-lock icon-shift-left"></i>
+          <input type="password" id="psw" name="psw" placeholder=" " />
+          <span class="placeholder-label">Password </span>
+          <span id="showOrHide"
+            ><i class="fa-solid fa-eye icon-shift-right" id="eye"></i
+          ></span>
+        </div>
+        <div class="remember-forget">
+          <div class="div-shift-left">
+            <label for="rememberMe"
+              ><input type="checkbox" id="rememberMe" name="rememberMe" />
+              Remember Me</label
+            >
+          </div>
+          <div class="div-shift-right">
+            <a href="#" class="forgotPassword">Forgot Password?</a>
+          </div>
+        </div>
+        <div class="login-box">
+          <input type="submit" value="Login" class="login" /><span></span>
+        </div>
+      </form>
+
+      <div class="register">
+        <p>
+          <label>
+            Dont have an account?
+            <a href="#" class="signUp">Sign Up</a>
+          </label>
+        </p>
+      </div>
+    </div>
+    <script>
+      setTimeout(document.getElementById("uname").focus(), 5000);
+      const button = document.getElementById("showOrHide");
+      const passBox = document.getElementById("psw");
+      const i = document.getElementById("eye");
+
+      button.addEventListener("click", function () {
+        if (passBox.getAttribute("type") === "password") {
+          passBox.setAttribute("type", "text");
+          i.classList.replace("fa-eye", "fa-eye-slash");
+        } else if (passBox.getAttribute("type") === "text") {
+          passBox.setAttribute("type", "password");
+          i.classList.replace("fa-eye-slash", "fa-eye");
+        } else {
+          alert("Please don't mess with my code");
+        }
+      });
+    </script>
+  </body>
+</html>

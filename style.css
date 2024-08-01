@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*:focus {
+  outline: none;
+  border: none;
+}
+
+body {
+  background: url(img.jpg) no-repeat center fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 420px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  color: white;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+h1 {
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.input-box {
+  height: 50px;
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 20px 45px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-box input:hover {
+  border-color: rgb(97, 58, 198);
+}
+
+.input-box input:focus {
+  border-color: rgb(97, 58, 198);
+}
+
+.input-box input::placeholder {
+  color: white;
+}
+
+div.remember-forget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: -15px 0 15px;
+}
+
+i.icon-shift-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+i.icon-shift-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.remember-forget label {
+  margin-left: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.remember-forget label:hover {
+  color: rgb(26, 16, 50);
+  background-color: #a061e3;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.remember-forget label input {
+  transform: translateY(1px);
+  accent-color: white;
+  margin-right: 3px;
+  outline: none;
+  border: none;
+}
+
+.remember-forget label input:hover {
+  transition: all 0.2s ease-in-out;
+  accent-color: rgb(118, 63, 206);
+}
+
+.remember-forget a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.remember-forget a:hover {
+  color: rgb(26, 16, 50);
+  background-color: #a061e3;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.login {
+  width: 100%;
+  height: 40px;
+  background: white;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  font-size: 16px;
+  color: gray;
+  box-shadow: (0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.login:hover {
+  transition: 0.2s;
+  color: black;
+}
+
+.login {
+  background: linear-gradient(to bottom right, #974be8, #5c14d0);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.login:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(147, 71, 239, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+  transform: scale(1.1);
+}
+
+.login:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(147, 71, 239, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+  transform: scale(1.05);
+}
+
+.register {
+  text-align: center;
+  font-size: 14px;
+}
+
+span.placeholder-label {
+  pointer-events: none;
+  position: absolute;
+  left: 46px;
+  top: 13px;
+  transition: 0.4s;
+  font-size: 16px;
+  width: 90px;
+  height: fit-content;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* When input is focused, or the placeholder is not being displayed, change the placeholder size, position and color */
+input:focus + span,
+input:not(:placeholder-shown) + span {
+  opacity: 1;
+  background-color: rgb(97, 58, 198);
+  color: inherit;
+  transform: scale(0.95) translateY(-110%) translateX(-6px);
+  border-radius: 12px;
+}
+
+div.register {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+div.register p a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+}
+
+div.register p a:hover,
+div.register p a:focus {
+  color: rgb(26, 16, 50);
+  background-color: #a19de0;
+  padding: 4px;
+  border-radius: 12px;
+}
